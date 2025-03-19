@@ -22,7 +22,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="w-full h-[calc(100vh-58px)] border-r">
+    <div className="w-full h-[calc(100vh-58px)] lg:border-r">
       <div className="pt-3 pr-4 pb-2 pl-6 border-b">
         <span className="text-sm text-gray-500 dark:text-primary">
           {"월 예산 : "}
@@ -35,7 +35,7 @@ export default function Sidebar() {
         {SIDEBAR.CATEGORY.map((category) => (
           <li
             onClick={categoryClick}
-            className="px-6 leading-11 hover:bg-primary-foreground cursor-pointer"
+            className="px-6 leading-10 hover:bg-primary-foreground cursor-pointer"
             key={category.title}
           >
             <a href={category.href}>
@@ -50,7 +50,7 @@ export default function Sidebar() {
         ))}
         <li
           onClick={toggleReportMenu}
-          className={`px-6 leading-11 hover:bg-primary-foreground cursor-pointer ${
+          className={`px-6 leading-10 hover:bg-primary-foreground cursor-pointer ${
             isReportOpen && "bg-primary-foreground"
           }`}
         >
@@ -65,7 +65,7 @@ export default function Sidebar() {
           SIDEBAR.REPORT.items.map((reportItem) => (
             <li
               onClick={categoryClick}
-              className={`px-6 leading-11 hover:text-primary curosr-pointer ${
+              className={`px-6 leading-10 hover:text-primary curosr-pointer ${
                 isReportOpen && "bg-primary-foreground"
               }`}
               key={reportItem.title}
@@ -77,7 +77,7 @@ export default function Sidebar() {
           ))}
         <li
           onClick={categoryClick}
-          className="px-6 leading-11 hover:bg-primary-foreground cursor-pointer"
+          className="px-6 leading-10 hover:bg-primary-foreground cursor-pointer"
         >
           <a href={"/profile"}>
             <p className="flex items-center">
@@ -89,7 +89,7 @@ export default function Sidebar() {
           </a>
         </li>
         <LogoutButton>
-          <li className="px-6 leading-11 hover:bg-primary-foreground cursor-pointer">
+          <li className="px-6 leading-10 hover:bg-primary-foreground cursor-pointer">
             <p className=" flex items-center">
               <span>
                 <LogOut className="w-4 h-4 -mt-0.5 mr-3" />
